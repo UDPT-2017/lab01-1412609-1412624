@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <base href="http://localhost:3000" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <script src="js/jquery.js" charset="utf-8"></script>
+    <script src="js/bootstrap.js" charset="utf-8"></script>
+    <script>
+        $(document).ready(function () {
+            $('#view1').click(function () {
+                var id = $(this).attr("hinh");
+                $.get("http://localhost:3000/view/" + id);
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#view2').click(function () {
+                var id = $(this).attr("hinh");
+                $.get("http://localhost:3000/view/" + id);
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#view3').click(function () {
+                var id = $(this).attr("hinh");
+                $.get("http://localhost:3000/view/" + id);
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#view4').click(function () {
+                var id = $(this).attr("hinh");
+                $.get("http://localhost:3000/view/" + id);
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="#">1412609-1412624</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="album">Album</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</ol>
+    <div class="row-offcanvas row-offcanvas-left">
+        <div id="sidebar" class="sidebar-offcanvas">
+            <div class="col-md-12">
+                <h3>Menu</h3>
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="#">Section</a></li>
+                    <li><a href="#">Section</a></li>
+                    <li><a href="#">Section</a></li>
+                    <li><a href="#">Section</a></li>
+                    <li><a href="#">Section</a></li>
+                    <li><a href="#">Section</a></li>
+                    <li><a href="#">Section</a></li>
+                    <li><a href="#">Section</a></li>
+                    <li><a href="#">Section</a></li>
+                    <li><a href="#">Section</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            <div class="col-md-12">
+                <p class="visible-xs">
+                    <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                </p>
+                   <ol class="breadcrumb">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Album</a></li>
+  <li class="active">Bình Thuận</li>
+                   </ol>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail">
+                                <a href="album/1"> <img id="view1" src="images/img1.jpg" hinh=1></a>
+                                <div class="caption">
+                                    <h3>
+                                        <%= DanhSach.rows[0].ten %>
+                                    </h3>
+                                    <p>
+                                        <%= DanhSach.rows[0].mota %>
+                                    </p>
+                                    <p>Views:
+                                        <%= DanhSach.rows[0].view %>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail">
+                                <a href="album/1"> <img id="view2" src="images/img2.jpg" hinh=2></a>
+                                <div class="caption">
+                                    <h3>
+                                        <%= DanhSach.rows[1].ten %>
+                                    </h3>
+                                    <p>
+                                        <%= DanhSach.rows[1].mota %>
+                                    </p>
+                                    <p>Views:
+                                        <%= DanhSach.rows[1].view %>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail">
+                                <a href="album/1"> <img id="view3" src="images/img3.jpg" hinh=3></a>
+                                <div class="caption">
+                                    <h3>
+                                        <%= DanhSach.rows[2].ten %>
+                                    </h3>
+                                    <p>
+                                        <%= DanhSach.rows[2].mota %>
+                                    </p>
+                                    <p>Views:
+                                        <%= DanhSach.rows[2].view %>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail">
+                                <a href="album/1"> <img id="view4" src="images/img4.jpg" hinh=4></a>
+                                <div class="caption">
+                                    <h3>
+                                        <%= DanhSach.rows[3].ten %>
+                                    </h3>
+                                    <p>
+                                        <%= DanhSach.rows[3].mota %>
+                                    </p>
+                                    <p>Views:
+                                        <%= DanhSach.rows[3].view %>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle=offcanvas]').click(function () {
+                $('.row-offcanvas').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
