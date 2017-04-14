@@ -1,19 +1,21 @@
 var express = require("express");
 
 var app = express();
+app.set('port', (process.env.PORT || 5000));
 app.use (express.static('public'));
 app.set("view engine","ejs");
 app.set("views","./views");
 var pg = require('pg');
-app.listen(3000);
+pg.defaults.ssl = true;
+app.listen(app.get('port'));
 // app.get("/album",function(req,res){
 //     res.render("album");
 // })
 var config = {
-  user: 'postgres', //env var: PGUSER
-  database: 'photos', //env var: PGDATABASE
-  password: '7Khongco', //env var: PGPASSWORD
-  host: 'localhost', // Server hosting the postgres database
+  user: 'nowgsdwfziefnu', //env var: PGUSER
+  database: 'ddjmaijdbgqro4', //env var: PGDATABASE
+  password: '7c0a6d16a80342941837d3a475f79b76fa3a9411ce0e3b11f751fcc966550a02', //env var: PGPASSWORD
+  host: 'ec2-23-21-76-49.compute-1.amazonaws.com', // Server hosting the postgres database
   port: 5432, //env var: PGPORT
   max: 10, // max number of clients in the pool
   idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
@@ -23,6 +25,8 @@ var config = {
 //it will keep idle connections open for 30 seconds
 //and set a limit of maximum 10 idle clients
 const pool = new pg.Pool(config);
+
+
 
 app.get("/view/:id",function(req,res){
   var id = req.params.id;
