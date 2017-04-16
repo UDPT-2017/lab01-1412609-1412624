@@ -51,4 +51,28 @@ body {
 }
 
 
+.post-container {
+    margin: 20px 20px 0 0;  
+    overflow: auto;
+  background-color: white;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+}
+.post-thumb {
+    float: left
+}
+.post-thumb img {
+  width: 200px;
+  height:  200px;
+    display: block;
+    margin: 20px;
+}
+.post-content {
+    margin-left: 210px
+}
+.post-title {
+    font-weight: bold;
+    font-size: 200%
+}
+
 

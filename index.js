@@ -96,3 +96,49 @@ app.get("/album/",function(req,res){
 app.get("/",function(req,res){
     res.render("main");
 })
+
+
+
+app.get("/blog/",function(req,res){
+  var id = req.params.id;
+  pool.connect(function(err, client, done) {
+  if(err) {
+    return console.error('error fetching client from pool', err);
+  }
+  
+  //use the client for executing the query
+  client.query('SELECT SUM(view) as sum FROM blog', function(err, result) {
+    //call `done(err)` to release the client back to the pool (or destroy it if there is an error)
+    done(err);
+
+    if(err) {
+        res.end();
+      return console.error('error running query', err);
+    }
+        res.render("blogs.ejs",{luotXem:result});
+    console.log(result.rows[0].sum);
+    //output: 1
+  });})
+});
+
+app.get("/blog/:id",function(req,res){
+  var id = req.params.id;
+  pool.connect(function(err, client, done) {
+  if(err) {
+    return console.error('error fetching client from pool', err);
+  }
+  
+  //use the client for executing the query
+  client.query('UPDATE "blog" SET "view" = "view" + 1 WHERE ID ='+ id, function(err, result) {
+    //call `done(err)` to release the client back to the pool (or destroy it if there is an error)
+    done(err);
+
+    if(err) {
+        res.end();
+      return console.error('error running query', err);
+    }
+    console.log('Da tang view');
+    res.send('Da tang view');
+    //output: 1
+  });})
+});

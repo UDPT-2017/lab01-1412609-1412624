@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <base href="http://localhost:5000" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.js" charset="utf-8"></script>
+    <script src="js/bootstrap.js" charset="utf-8"></script>
+        <script>
+        $(document).ready(function () {
+            $('#viewblog').load(function () {
+                var id = $(this).attr("blog");
+                $.get("viewblog/" + id);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="#">1412609-1412624</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="album">Album</a></li>
+                    <li class="active"><a href="blog">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="row-offcanvas row-offcanvas-left">
+        <div id="sidebar" class="sidebar-offcanvas">
+            <div class="col-md-12">
+                <h3>Menu</h3>
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="#">Section</a></li>
+                    <li><a href="#">Section</a></li>
+                    <li><a href="#">Section</a></li>
+                    <li><a href="#">Section</a></li>
+                    <li><a href="#">Section</a></li>
+                    <li><a href="#">Section</a></li>
+                    <li><a href="#">Section</a></li>
+                    <li><a href="#">Section</a></li>
+                    <li><a href="#">Section</a></li>
+                    <li><a href="#">Section</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            <div class="col-md-12">
+                <p class="visible-xs">
+                    <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                </p>
+                <div class="container">
+
+
+                    <!--
+                        <div class="col-md-4">
+                            <img width="250" height="155" src="https://cdn-mspoweruser.netdna-ssl.com/wp-content/uploads/2017/03/BioShock-The-Collection_2016_06-29-16_007-760x500.jpg"
+                            />
+                        </div>-->
+                    <!--<div class="col-md-8 blog-main">-->
+
+                    <div class="col-sm-8 blog-main">
+
+                        <div class="post-container">
+                            <div class="post-thumb"><img id="viewblog" blog = 1 src="https://cdn-mspoweruser.netdna-ssl.com/wp-content/uploads/2017/03/BioShock-The-Collection_2016_06-29-16_007-760x500.jpg"
+                                /></div>
+                            <div class="blog-post">
+                               <a href="blog/1"><div  id = "viewblog" blog = 1><h3 class="blog-post-title">Post title</h3> </div></a>
+                                <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
+                                <p>post desc post desc post desc post desc post desc post desc post desc post desc post desc
+                                    post desc post desc post desc post desc post desc post desc post desc post desc post
+                                    desc post desc post desc post desc post desc post desc post desc post desc post desc
+                                    post desc post desc post desc post </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--</div> container-->
+    </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle=offcanvas]').click(function () {
+                $('.row-offcanvas').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
