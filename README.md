@@ -1,6 +1,6 @@
 # BT-UDPT-1 - *Name of your app*
 
-**Name of your app** là một bài tập 1 tại môn UDPT.
+**https://fathomless-crag-64250.herokuapp.com** là một bài tập 1 tại môn UDPT.
 
 Thành viên:
 * [x] **1412624** Nguyễn Quốc Anh Tú
