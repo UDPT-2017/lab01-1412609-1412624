@@ -3,7 +3,7 @@
 
 <head>
     <title>Home</title>
-    <base href="http://localhost:5000" />
+    <base href="https://fathomless-crag-64250.herokuapp.com" />
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
@@ -78,15 +78,14 @@
                     <div class="col-sm-8 blog-main">
 
                         <div class="post-container">
-                            <div class="post-thumb"><img id="viewblog" blog = 1 src="https://cdn-mspoweruser.netdna-ssl.com/wp-content/uploads/2017/03/BioShock-The-Collection_2016_06-29-16_007-760x500.jpg"
-                                /></div>
+                            <div class="post-thumb"> <a href="blog/1"> <img id="viewblog" blog = 1 src="https://cdn-mspoweruser.netdna-ssl.com/wp-content/uploads/2017/03/BioShock-The-Collection_2016_06-29-16_007-760x500.jpg"
+                                /></a> </div>
                             <div class="blog-post">
-                               <a href="blog/1"><div  id = "viewblog" blog = 1><h3 class="blog-post-title">Post title</h3> </div></a>
-                                <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
-                                <p>post desc post desc post desc post desc post desc post desc post desc post desc post desc
-                                    post desc post desc post desc post desc post desc post desc post desc post desc post
-                                    desc post desc post desc post desc post desc post desc post desc post desc post desc
-                                    post desc post desc post desc post </p>
+                               <a href="blog/1"><div  id = "viewblog" blog = 1><h3 class="blog-post-title">Shadow Brokers spill new NSA Windows exploits on the net that can offer “God Mode” to hackers</h3> </div></a>
+                                <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a> Views:
+                                        <%= DanhSach.rows[0].view %> </p>                                    
+                             
+                                <p>Hacking group the Shadow Brokers has today dumped a new collection of Windows hacks used by the NSA to target computers on the web. The collection is believed to contain a number of Zero-day exploits with the LawFare security blo...</p>
                             </div>
                         </div>
                     </div>
@@ -96,7 +95,25 @@
         <!--</div> container-->
     </div>
     </div>
-
+<footer class="container">
+    <div class="row">
+      <p class="col-sm-4">&copy;UDPT-2017</p>
+      <ul class="col-sm-8">
+        <li class="col-sm-1">
+          <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/twitter.svg">
+        </li>
+        <li class="col-sm-1">
+          <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/facebook.svg">
+        </li>
+        <li class="col-sm-1">
+          <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/instagram.svg">
+        </li>
+        <li class="col-sm-1">
+          <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/medium.svg">
+        </li>
+      </ul>
+    </div>
+  </footer>
     <script>
         $(document).ready(function () {
             $('[data-toggle=offcanvas]').click(function () {

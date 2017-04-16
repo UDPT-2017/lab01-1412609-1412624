@@ -93,9 +93,7 @@ app.get("/album/",function(req,res){
     //output: 1
   });})
 });
-app.get("/",function(req,res){
-    res.render("main");
-})
+
 
 
 
@@ -107,7 +105,7 @@ app.get("/blog/",function(req,res){
   }
   
   //use the client for executing the query
-  client.query('SELECT SUM(view) as sum FROM blog', function(err, result) {
+  client.query('SELECT * FROM blog', function(err, result) {
     //call `done(err)` to release the client back to the pool (or destroy it if there is an error)
     done(err);
 
@@ -115,7 +113,7 @@ app.get("/blog/",function(req,res){
         res.end();
       return console.error('error running query', err);
     }
-        res.render("blogs.ejs",{luotXem:result});
+        res.render("blogs.ejs",{DanhSach:result});
     console.log(result.rows[0].sum);
     //output: 1
   });})
@@ -138,7 +136,9 @@ app.get("/blog/:id",function(req,res){
       return console.error('error running query', err);
     }
     console.log('Da tang view');
-    res.send('Da tang view');
+   // res.send('Da tang view');
+      res.render("blog1.ejs");
     //output: 1
   });})
 });
+

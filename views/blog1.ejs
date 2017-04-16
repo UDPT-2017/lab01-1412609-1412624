@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <base href="https://fathomless-crag-64250.herokuapp.com" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.js" charset="utf-8"></script>
+    <script src="js/bootstrap.js" charset="utf-8"></script>
+        <script>
+        $(document).ready(function () {
+            $('#viewblog').load(function () {
+                var id = $(this).attr("blog");
+                $.get("viewblog/" + id);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="#">1412609-1412624</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="album">Album</a></li>
+                    <li class="active"><a href="blog">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="row-offcanvas row-offcanvas-left">
+        <div id="sidebar" class="sidebar-offcanvas">
+            <div class="col-md-12">
+                <h3>Menu</h3>
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="#">Section</a></li>
+                    <li><a href="#">Section</a></li>
+                    <li><a href="#">Section</a></li>
+                    <li><a href="#">Section</a></li>
+                    <li><a href="#">Section</a></li>
+                    <li><a href="#">Section</a></li>
+                    <li><a href="#">Section</a></li>
+                    <li><a href="#">Section</a></li>
+                    <li><a href="#">Section</a></li>
+                    <li><a href="#">Section</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            <div class="col-md-12">
+                <p class="visible-xs">
+                    <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                </p>
+                <div class="container">
+
+
+                    <!--
+                        <div class="col-md-4">
+                            <img width="250" height="155" src="https://cdn-mspoweruser.netdna-ssl.com/wp-content/uploads/2017/03/BioShock-The-Collection_2016_06-29-16_007-760x500.jpg"
+                            />
+                        </div>-->
+                    <!--<div class="col-md-8 blog-main">-->
+
+                    <div class="col-sm-8 blog-main">
+
+                            <div class="blog-post">
+                               <a href="blog/1"><div  id = "viewblog" blog = 1><h3 class="blog-post-title">Shadow Brokers spill new NSA Windows exploits on the net that can offer “God Mode” to hackers</h3> </div></a>
+                                                          
+                                <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
+                                 <img width="300" height="200" src="https://cdn-mspoweruser.netdna-ssl.com/wp-content/uploads/2017/04/hack.jpg"/>
+                                <p>Hacking group the Shadow Brokers has today dumped a new collection of Windows hacks used by the NSA to target computers on the web.
+The collection is believed to contain a number of Zero-day exploits with the LawFare security blog quipping “I’m only being somewhat glib in suggesting that the best security measure for a Windows computer might be to just turn it off for a few days.”
+It is believed it would be really easy for so-called “script kiddies” to weaponize the hacks with the exploits affecting a number of products.
+“There appears to be at least several dozen exploits, including zero-day vulnerabilities in this release. Some of the exploits even offer a potential ‘God Mode’ on select Windows systems. A few of the products targeted include Lotus Notes, Lotus Domino, IIS, SMB, Windows XP, Windows 8, Windows Server 2003, and Windows Server 2012,” said Cris Thomas, a strategist and Tenable Network Security.
+Most of the exploits are targeted at older versions of Windows, with the newest seemingly targeting Windows 8. Hopefully, much of the holes have already been filled in the intervening years.
+A Microsoft spokesperson said, “We are reviewing the report and will take the necessary actions to protect our customers.”</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--</div> container-->
+    </div>
+    </div>
+<footer class="container">
+    <div class="row">
+      <p class="col-sm-4">&copy;UDPT-2017</p>
+      <ul class="col-sm-8">
+        <li class="col-sm-1">
+          <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/twitter.svg">
+        </li>
+        <li class="col-sm-1">
+          <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/facebook.svg">
+        </li>
+        <li class="col-sm-1">
+          <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/instagram.svg">
+        </li>
+        <li class="col-sm-1">
+          <img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/medium.svg">
+        </li>
+      </ul>
+    </div>
+  </footer>
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle=offcanvas]').click(function () {
+                $('.row-offcanvas').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
