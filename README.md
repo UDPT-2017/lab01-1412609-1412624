@@ -53,7 +53,7 @@ Liệt kê các **yêu cầu nâng cao** đã thực hiện:
 
 Link ảnh GIF demo ứng dụng:
 
-![Video Walkthrough](demo.gif)
+![Video Walkthrough](https://github.com/UDPT-2017/lab01-1412609-1412624/blob/master/lab1demo.gif?raw=true)
 
 Tạo ảnh GIF với chương trình [LiceCap](http://www.cockos.com/licecap/).
 
